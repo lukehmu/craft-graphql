@@ -1,0 +1,149 @@
+dateModified: 1565960919
+email:
+  fromEmail: lukehmu@gmail.com
+  fromName: CraftQL
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  c042f134-2319-4d71-8cc1-f07a2028fcca:
+    name: Common
+  c86dbf63-0511-49f2-b3bb-626619ab0ef1:
+    name: Beer
+fields:
+  592a9dcd-97bf-459e-97dc-e6d1bb1eb11e:
+    name: Description
+    handle: description
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: c86dbf63-0511-49f2-b3bb-626619ab0ef1
+  cb14819b-9de9-4c0f-8e87-c0eff6171df5:
+    name: Image
+    handle: image
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: ''
+      defaultUploadLocationSource: 'volume:6b1c14cb-cafc-4879-876e-eb3dab3e3e20'
+      defaultUploadLocationSubpath: ''
+      singleUploadLocationSource: 'volume:6b1c14cb-cafc-4879-876e-eb3dab3e3e20'
+      singleUploadLocationSubpath: ''
+      restrictFiles: ''
+      allowedKinds: null
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: list
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: c86dbf63-0511-49f2-b3bb-626619ab0ef1
+  ffec6a78-d4ba-4d3e-8404-8225b52e6794:
+    name: Percentage
+    handle: percentage
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Number
+    settings:
+      defaultValue: null
+      min: '0'
+      max: null
+      decimals: '1'
+      size: null
+      prefix: ''
+      suffix: '%'
+    contentColumnType: 'decimal(11,1)'
+    fieldGroup: c86dbf63-0511-49f2-b3bb-626619ab0ef1
+plugins:
+  craftql:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.0
+sections:
+  086d7a9c-26ab-48af-8d4e-5918713e3b99:
+    name: Beer
+    handle: beer
+    type: channel
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      b81980d2-950b-45e5-b2e0-e463dc83017d:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'beer/{slug}'
+        template: ''
+    entryTypes:
+      dc72437a-6cff-4b65-bdbe-3f5b6e915ad1:
+        name: Beer
+        handle: beer
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          16f16ef1-4042-4729-9605-dd9befeca60e:
+            tabs:
+              -
+                name: Beer
+                sortOrder: 1
+                fields:
+                  592a9dcd-97bf-459e-97dc-e6d1bb1eb11e:
+                    required: false
+                    sortOrder: 1
+                  cb14819b-9de9-4c0f-8e87-c0eff6171df5:
+                    required: false
+                    sortOrder: 2
+                  ffec6a78-d4ba-4d3e-8404-8225b52e6794:
+                    required: false
+                    sortOrder: 3
+siteGroups:
+  45728071-e9db-4b8e-ad6c-b3602440ba53:
+    name: CraftQL
+sites:
+  b81980d2-950b-45e5-b2e0-e463dc83017d:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-GB
+    name: CraftQL
+    primary: true
+    siteGroup: 45728071-e9db-4b8e-ad6c-b3602440ba53
+    sortOrder: 1
+system:
+  edition: solo
+  name: CraftQL
+  live: true
+  schemaVersion: 3.2.16
+  timeZone: America/Los_Angeles
+users:
+  requireEmailVerification: true
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoVolumeUid: null
+  photoSubpath: ''
+volumes:
+  6b1c14cb-cafc-4879-876e-eb3dab3e3e20:
+    name: 'Local assets'
+    handle: localAssets
+    type: craft\volumes\Local
+    hasUrls: true
+    url: '@web/localAssets'
+    settings:
+      path: localAssets
+    sortOrder: 1
